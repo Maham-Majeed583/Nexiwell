@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>Nexiwell</title>
+    <style>
+        @font-face {
+            font-family: "open sans";
+            src: url(font/Open_Sans/static/OpenSans-Regular.ttf);
+        }
+
+        .bg {
+            width: 100%;
+            margin: -9% 0% 10% 0%;
+            /* padding: 0% 15% 0% 0%; */
+        }
+       
+        .bg .bg-img {
+            width: 75%;
+            margin-left: 7%;
+        }
+        header {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            margin-top: 1%;
+            position: sticky;
+            top: 0%;
+        }
+
+        header .left {
+            width: 30%;
+            margin-left: 15%;
+            box-sizing: border-box;
+            padding: 10px 0px 10px 0px;
+        }
+        header .left h1{
+            font-size: 40px;
+            font-family: "open sans";
+            color: #3d5b97;
+            font-weight: 600;
+            font-style: italic;
+        }
+        header .right {
+            width: 70%;
+            box-sizing: border-box;
+            padding: 25px 0px 0px 0px;
+        }
+
+
+        .right ul {
+            display: flex;
+            font-family: "open sans";
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .right ul li {
+            padding: 0px 20px;
+        }
+
+        .right ul li a {
+            text-decoration: none;
+            color: #3d5b97;
+            font-weight: bold;
+
+        }
+
+        a:hover {
+            color: #5995db;
+        }
+
+        .text {
+            width: 70%;
+            margin-top: -18%;
+            margin-left: 15%;
+            font-family: "open sans";
+          
+            
+        }
+
+        .text .p1 {
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 3%;
+            line-height: 1.2;
+            
+        }
+
+        .text .p2 {
+            color: #ffffff;
+            font-weight: bold;
+            line-height: 20px;
+        }
+
+        .bg button {
+            width: 10%;
+            padding: 16px 16px;
+            background: #5995db;
+            border: 0;
+            margin-left: 15%;
+            margin-top: 2%;
+            color: white;
+            font-weight: bold;
+        }
+
+        label #btn,
+        label #cancel {
+            color: #5995db;
+            font-size: 25px;
+            float: right;
+            line-height: 80px;
+            margin-right: 25px;
+            cursor: pointer;
+            display: none;
+            margin-top: -38px;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .sec-1 {
+            width: 100%;
+            font-family: "open sans";
+            font-size: 35px;
+            margin-bottom: 8%;
+        }
+
+        .sec-1 .heading {
+            box-sizing: border-box;
+            /* padding: 0px 0% 0% 0%; */
+            margin-bottom: 8%;
+        }
+        .sec-1 .heading p{
+            text-align: center;
+        }
+        .sec-1 .container {
+            width: 70%;
+            display: flex;
+            margin: auto;
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background: #5995db;
+            border: 1px solid #5995db;
+            border-radius: 50%;
+            box-sizing: border-box;
+            padding: 26px 21px;
+            margin-bottom: 15%;
+            margin-left: 27%;
+        }
+
+        .i {
+            padding-left: 24px;
+            padding-top: 21px;
+        }
+
+        .card1 {
+            width: 30%;
+            padding: 0% 5%;
+        }
+
+        .card1 .p1 {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20%;
+        }
+
+        .card1 .p2 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #9e9b97;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .why{
+            text-align: center;
+            font-size: 35px;
+            font-family: "open sans";
+            margin-bottom: 6%;
+        }
+
+        .sec-2 {
+            width: 100%;
+            background-image: url(images/assets/background-picture.png);
+            margin-bottom: 6%;
+        }
+
+        .sec-2 .men {
+            width: 72%;
+            display: flex;
+            /* margin: auto; */
+            box-sizing: border-box;
+            padding: 4% 0px 0% 0%;
+            font-family: "open sans";
+            margin-left: 18%;
+        }
+
+        .sec-2 .men .left .c-t {
+            display: flex;
+        }
+
+        .sec-2 .men .left .circle {
+            width: 60px;
+            height: 60px;
+            background: #5995db;
+            border: 1px solid #5995db;
+            border-radius: 50%;
+            box-sizing: border-box;
+            padding: 15px 15px;
+            margin-left: 2%;
+
+        }
+
+        .sec-2 .men .left .circle p {
+            font-size: 28px;
+            font-style: italic;
+            color: white;
+        }
+
+        .sec-2 .men .left .heading {
+            font-size: 35px;
+            margin-bottom: 6%;
+        }
+
+        .sec-2 .men .left .p1 {
+            width:80%;
+            text-align: center;
+            line-height: 26px;
+            color: #9e9b97;
+        }
+
+        .sec-2 .men .left .p2 {
+            width: 90%;
+            text-align: left;
+            line-height: 26px;
+            color: #9e9b97;
+            margin-bottom: 7%;
+        }
+
+        .sec-2 .men .left .name {
+            font-family: "open sans";
+            font-size: 20px;
+        }
+
+        .sec-2 .men .right {
+            margin-top: -10%;
+        }
+
+        .sec-3 {
+            width: 100%;
+            font-family: "open sans";
+            margin-bottom: 5%;
+        }
+
+        .sec-3 .container {
+            width: 70%;
+            display: flex;
+            margin: auto;
+        }
+
+        .sec-3 .left {
+            margin-left: 3%;
+        }
+
+        .sec-3 .container .right {
+            width: 60%;
+            margin-left: 8%;
+
+        }
+
+        .sec-3 .container .right .heading {
+            font-size: 35px;
+            margin-bottom: 3%;
+        }
+
+        .sec-3 .container .right .para {
+            text-align: left;
+            width: 96%;
+            line-height: 45px;
+            color: #9e9b97;
+        }
+
+        .sec-4 {
+            font-family: sans-serif;
+            width: 100%;
+            background-image: url(images/bookone-assets/bookone-assets/background-picture.png);
+            box-sizing: border-box;
+            padding: 2% 0%;
+        }
+
+        .sec-4 .center {
+            width: 40%;
+            margin-left: 30%;
+        }
+
+        .sec-4 .heading {
+            font-size: 35px;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+
+        .sec-4 .pg {
+            width: 90%;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #9e9b97;
+            margin-bottom: 2%;
+        }
+
+        .sec-4 .mail {
+            margin-left: 32%;
+        }
+
+        .sec-4 input {
+            width: 36%;
+            height: 34px;
+            text-transform: uppercase;
+            /* color: #5995db; */
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            padding: 0px 0px 0px 16px;
+        }
+
+        .sec-4 button {
+            width: 12%;
+            height: 34px;
+            text-transform: uppercase;
+            background: #5995db;
+            color: #fff;
+            border: 1px solid #5995db;
+            margin-left: -4px;
+        }
+
+        .sec-5 {
+            width: 100%;
+            font-family: "open sans";
+
+        }
+
+        .sec-5 .center {
+            width: 70%;
+            display: flex;
+            margin-left: 15%;
+        }
+
+        .sec-5 .center .left {
+            width: 50%;
+
+            box-sizing: border-box;
+            padding: 4% 0%;
+        }
+
+        .sec-5 .center .left .heading {
+            font-size: 30px;
+            margin-bottom: 2.5%;
+        }
+
+        .sec-5 .center .left .p {
+            width: 100%;
+            line-height: 20px;
+            color: #9e9b97;
+            margin-bottom: 15%;
+        }
+
+        .sec-5 .center button {
+            width: 24%;
+            height: 34px;
+            text-transform: uppercase;
+            background: #5995db;
+            color: #fff;
+            border: 1px solid #5995db;
+            margin-left: -4px;
+        }
+
+        .sec-5 .center .right {
+            width: 40%;
+            box-sizing: border-box;
+            padding: 0% 2% 0% 5%;
+        }
+
+        .sec-5 .center .right video {
+            max-width: 140%;
+            max-height: 100%;
+        }
+
+        .sec-6 {
+            width: 100%;
+            background-image: url(images/bookone-assets/bookone-assets/background-picture.png);
+            box-sizing: border-box;
+            padding: 0px 0px 2% 0px;
+        }
+
+        .sec-6 .center {
+            width: 70%;
+            display: flex;
+            margin: auto;
+        }
+
+        .sec-6 .center .left {
+            width: 40%;
+            margin-top: 8%;
+            /* margin-right: 5%; */
+            font-family: "open sans";
+        }
+
+        .sec-6 .center .left .heading {
+            font-size: 35px;
+            margin-bottom: 5%;
+        }
+
+        .sec-6 .center .left .para {
+            width: 72%;
+            line-height: 25px;
+            color: #9e9b97;
+            margin-bottom: 6%;
+        }
+
+        .sec-6 .center .left .r1 {
+            display: flex;
+            margin-bottom: 5%;
+        }
+
+        .sec-6 .center .left .r1 p {
+            margin-left: 8%;
+            margin-top: 2%;
+
+        }
+
+        .sec-6 .center .right {
+            width: 62%;
+            margin-top: 8%;
+            margin-left: 5%;
+            font-family: "open sans";
+            box-sizing: border-box;
+            padding: 0% 0% 0% 6%;
+        }
+
+        .sec-6 .center .right .heading {
+            font-size: 35px;
+            margin-bottom: 7%;
+        }
+
+        .sec-6 .center .right input {
+            width: 102%;
+            height: 35px;
+            margin-bottom: 4%;
+            box-sizing: border-box;
+            padding: 0px 0px 0px 15px;
+            border: 1px solid #9e9b97;
+        }
+
+        .sec-6 .center .right input::placeholder {
+            color: #5995db;
+        }
+
+        .sec-6 .center .right input.msg {
+            height: 65px;
+            margin-bottom: 6%;
+        }
+
+        .sec-6 .center .right button {
+            width: 24%;
+            height: 34px;
+            text-transform: uppercase;
+            background: #5995db;
+            color: #fff;
+            border: 1px solid #5995db;
+        }
+
+        .sec-7 {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1% 0px;
+            background: #dbdbdb;
+            font-family: "open sans";
+        }
+
+        .sec-7 .center {
+            width: 40%;
+            margin-left: 45%;
+        }
+
+        .sec-7 .center .logo {
+            margin-bottom: 3%;
+        }
+
+        .sec-7 .center p {
+            font-weight: bold;
+            margin-bottom: 3%;
+        }
+
+        .sec-7 .center ul {
+            display: flex;
+            margin-left: -12%;
+        }
+
+        .sec-7 .center ul li {
+            font-family: "open sans";
+            width: 80px;
+
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 0px 0px;
+        }
+
+        .sec-7 .center ul li a {
+            display: block;
+            color: #fff;
+            height: 35px;
+            box-sizing: border-box;
+            padding: 10px 0px 0px 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .fa-facebook {
+            background: #3d5b97;
+
+        }
+
+        .fa-tumblr {
+            background: #2aa7df;
+        }
+
+        .fa-google {
+            background: #2aa7df;
+        }
+
+        .fa-linkedin {
+            background: #4392cb;
+        }
+
+        .r1 .fa {
+
+            font-size: 22px;
+            color: #5995db;
+            margin-top: 1%;
+        }
+        @media Screen and (max-width:375px) {
+            
+
+            .bg {
+                width: 100%;
+                margin: -9% 0% 12% -7%;
+            }
+
+            .bg .bg-img {
+                width: 100%;
+                margin-top: -16%;
+            }
+
+            .bg .bg-img img {
+                width: 106%;
+            }
+
+            header {
+                width: 100%;
+                height: 50px;
+                top: 0%;
+                display: flex;
+                z-index: 9999;
+                margin-top: 2%;
+            }
+
+            header .left {
+                width: 40%;
+                box-sizing: border-box;
+                padding: 5px 0px 10px 0px;
+                margin-left: 8%;
+            }
+
+            header .left img {
+                width: 80%;
+            }
+
+            label #btn,
+            label #cancel {
+                margin-right: 0px;
+            }
+
+            label #btn {
+                display: block;
+                margin-top: -65%;
+                margin-right: -80%;
+            }
+
+            header .right {
+                width: 20%;
+
+            }
+
+            .right ul {
+                display: block;
+                position: fixed;
+                width: 100%;
+                height: 70vh;
+                background: #5995db;
+                opacity: 90%;
+                top: 15%;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            .right ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            .right ul li a {
+                font-size: 20px;
+                color: white;
+            }
+
+            #check:checked~ul {
+                left: 0%;
+            }
+
+            #check:checked~label #btn {
+                display: none;
+            }
+
+            #check:checked~label #cancel {
+                display: block;
+            }
+
+            .text {
+                width: 50%;
+                margin-top: -28%;
+            }
+
+            .text .p1 {
+                font-size: 14px;
+                margin-bottom: 1%;
+            }
+
+            .text .p2 {
+                font-size: 10px;
+                line-height: 1;
+            }
+
+            .bg button {
+                width: 25%;
+                height: 25px;
+                font-size: 10px;
+                padding: 0px 16px;
+            }
+
+            .sec-1 {
+                font-size: 14px;
+            }
+
+            .sec-1 .heading {
+                font-size: 18px;
+                box-sizing: border-box;
+                padding: 0px 0% 0% 2%;
+            }
+
+            .sec-1 .container {
+                width: 100%;
+                display: block;
+                box-sizing: border-box;
+                padding: 0% 0% 0% 26%;
+            }
+
+            .card1 {
+                width: 70%;
+                padding: 0% 0%;
+                margin-bottom: 5%;
+            }
+
+            .card1 .p1 {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 5%;
+            }
+
+            .icon {
+                margin-bottom: 5%;
+                margin-left: 22%;
+            }
+
+            .sec-2 {
+                width: 100%;
+            }
+
+            .sec-2 .men {
+                width: 100%;
+                margin-left: 8%;
+                display: block;
+            }
+
+            .sec-2 .men .left {
+                margin-left: -5%;
+            }
+
+            .sec-2 .men .left .heading {
+                width: 100%;
+                font-size: 22px;
+            }
+
+            .sec-2 .men .left .c-t {
+                width: 90%;
+            }
+
+            .sec-2 .men .left .p1 {
+                font-size: 12px;
+                width: 80%;
+                margin-bottom: 5%;
+            }
+
+            .sec-2 .men .right {
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0% 0px 0px 0px;
+                margin-left: -5%;
+            }
+
+            .sec-3 .container {
+                display: block;
+            }
+
+            .sec-3 .left {
+                margin-left: -9%;
+            }
+
+            .sec-3 .container .right {
+                width: 100%;
+                margin-left: 0px;
+            }
+
+            .sec-3 .container .right .heading {
+                font-size: 22px;
+            }
+
+            .sec-3 .container .right .para {
+                text-align: center;
+                width: 100%;
+                line-height: 30px;
+            }
+
+            .sec-4 {
+                width: 100%;
+            }
+
+            .sec-4 .heading {
+                font-size: 22px;
+            }
+
+            .sec-4,
+            .center {
+                width: 100%;
+            }
+
+            .sec-4 .pg {
+                width: 100%;
+                font-size: 12px;
+            }
+
+            .sec-4 .mail {
+                margin-left: 24%;
+            }
+
+            .sec-4 input {
+                width: 40%;
+                height: 25px;
+            }
+
+            .sec-4 button {
+                width: 30%;
+                height: 25px;
+            }
+
+            .sec-5 .center {
+                width: 100%;
+                display: block;
+                margin-left: 1%;
+            }
+
+            .sec-5 .center .left {
+                width: 100%;
+            }
+
+            .sec-5 .center .left .heading {
+                font-size: 22px;
+                margin-bottom: 2.5%;
+                margin-left: 5%;
+            }
+            .sec-5 .center .left .p {
+            width: 90%;
+            line-height: 20px;
+            color: #9e9b97;
+            margin-bottom: 8%;
+            margin-left: 5%;
+            text-align: center;
+        }
+
+        .sec-5 .center button {
+            width: 28%;
+            margin-left: 35%;
+        }
+        
+        .sec-5 .center .right {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0% 2% 0% 0%;
+        }
+
+        .sec-5 .center .right video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .sec-6 .center {
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+        .sec-6 .center .left {
+            width: 100%;
+            margin-left: 10%;
+        }
+        .sec-6 .center .left .heading {
+            font-size: 22px;
+            margin-bottom: 5%;
+            margin-left: 12%;
+        }
+
+        .sec-6 .center .left .para {
+            width: 90%;
+            line-height: 25px;
+            color: #9e9b97;
+            margin-bottom: 6%;
+        }
+
+        .sec-6 .center .right {
+            width: 90%;
+            margin-left: 1%;
+        }
+
+        .sec-6 .center .right .heading {
+            font-size: 22px;
+            margin-bottom: 7%;
+            margin-left: 30%;
+        }
+
+        .sec-6 .center .right input {
+            width: 102%;
+            height: 35px;
+            margin-bottom: 4%;
+            box-sizing: border-box;
+            padding: 0px 0px 0px 15px;
+            border: 1px solid #9e9b97;
+        }
+        .sec-7 .center {
+            width: 40%;
+            margin-left: 33%;
+        }
+        .sec-7 .center .logo {
+            margin-left: -13%;
+            margin-bottom: 3%;
+        }
+
+        .sec-7 .center p {
+            width: 126%;
+        margin-left: -15%;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="left"><h1>Nexiwell</h1></div>
+        <div class="right">
+            <input type="checkbox" id="check">
+            <label for="check">
+                <span class="fa fa-bars" id="btn"></span>
+                <span class="f fa-times" id="cancel"></span>
+            </label>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#universities">Universities</a></li>
+                <li><a href="#why">Why Turkey</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">contact us</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="bg-img">
+            <img src="images/assets/bg.png"> 
+        </div>
+        <div class="text">
+            <!-- <p class="p1">we are going to launch a new book on ai! </p> -->
+            <p class="p2">Turkey is one of the most popular destinations among students studying abroad. The ideal mix of both western and eastern cultures attracts students all across the world to study in Turkey. <strong>Turkish culture</strong>&nbsp;is known for its generous spirit and marvellous hospitality making it easier for international students to adjust there. There is far more to Turkey than its education system and culture. It is a big country on the edge of Europe and Asia where you can explore ancient civilizations and huge metropolises simultaneously. Turkey’s well-developed tourism provides tourists with every opportunity to explore and have fun from climbing high mountains or swimming in the warm seas</p>
+        </div>
+        <button>More About Us</button>
+    </div>
+    <section class="sec-1" id="universities">
+        <div class="heading">
+            <p>Universities</p>
+        </div>
+
+        <div class="container">
+            <div class="card1">
+                <div class="icon">
+                    <img src="images/assets/business.png">
+                </div>
+                <p class="p1">Business</p>
+                <p class="p2">After reading this book,you will know how to easily solve the most complex life problems
+                </p>
+            </div>
+            <div class="card1">
+                <div class="icon">
+                    <img src="images/assets/computer science.png">
+                </div>
+                <p class="p1">Computer science</p>
+                <p class="p2">After reading this book,you will know how to easily solve the most complex life problems
+                </p>
+            </div>
+            <div class="card1">
+                <div class="icon i">
+                    <img src="images/assets/education.png">
+                </div>
+                <p class="p1">Education</p>
+                <p class="p2">After reading this book,you will know how to easily solve the most complex life problems
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="why" id="why"><p>Why Turkey is best for you</p></div>
+  
+    <section class="sec-2" > 
+      
+        <div class="men">
+            <div class="left">
+
+                <p class="heading">Scholarships Opportunities in Turkey</p>
+                <div class="c-t">
+                    <!-- <div class="circle">
+                        <p>AI</p>
+                    </div> -->
+                    <p class="p1">Turkey Scholarships allow international students to be placed in the university in their intended application program. With this feature, it differs from other scholarship programs in the world. The aim of Turkey Scholarships is to ensure that students benefit from social and cultural activities during their time in Turkey as well as university education. This Scholarship Program also covers the needs of students such as accommodation and health insurance during the education period.</p>
+                </div>
+                <!-- <p class="p2">Thanks to that kind of prolonged experiance i feel like i am able to help
+                    others.Basically,all the things that i've ever written about in any of my 12 books, is what's been
+                    tested by me partically.The main idea behind my books is a compassionate business. </p> -->
+                <!-- <p class="name">John Jackson</p> -->
+            </div>
+            <div class="right">
+                <img src="images/assets/subject-photo.png">
+            </div>
+        </div>
+    </section>
+    <section class="sec-3">
+        <div class="container">
+            <div class="left">
+                <img src="images/assets/book.png">
+            </div>
+            <div class="right">
+
+                <p class="heading">High Quality Education</p>
+
+                <p class="para">
+                    There are 208 universities in Turkey with a population of 84 million. The number of students is more than 8 million. With this number of students, Turkey is the first country with the most students in European Higher Education Area. There are more than 45.000 different programs at 208 universities. Turkey is one of the most successful countries participating in the exchange programs under Erasmus +.  </p>
+            </div>
+        </div>
+    </section>
+    <section class="sec-2"> 
+        <div class="men">
+            <div class="left">
+
+                <p class="heading">Low cost of living</p>
+                <div class="c-t">
+                    <!-- <div class="circle">
+                        <p>AI</p>
+                    </div> -->
+                    <p class="p1">Student cities such as Istanbul, Ankara, Izmir ranked 240th, 278th, 291st in Numbeo’s Cost of Living comparison, thus offering international students affordable study options.
+                        Students can opt for private accommodation, shared private rental accommodation, or on-campus dormitories.
+                        Students should budget, keeping in mind the cost of living in Turkey. International students will spend around $400- 500 on average on accommodation, food, clothing, transportation, and telephone.
+                        </p>
+                </div>
+                <!-- <p class="p2">Thanks to that kind of prolonged experiance i feel like i am able to help
+                    others.Basically,all the things that i've ever written about in any of my 12 books, is what's been
+                    tested by me partically.The main idea behind my books is a compassionate business. </p> -->
+                <!-- <p class="name">John Jackson</p> -->
+            </div>
+            <div class="right">
+                <img src="images/assets/subject-photo.png">
+            </div>
+        </div>
+    </section>
+    <section class="sec-3">
+        <div class="container">
+            <div class="left">
+                <img src="images/assets/book.png">
+            </div>
+            <div class="right">
+
+                <p class="heading">Work Opportunity while study in Turkey</p>
+
+                <p class="para">
+                    There are several internships opportunities available for international students which provide both exposure and experience in working in a Turkish organization.International students can work on a part-time basis. Career advisors at universities can guide regarding finding jobs in Turkey for Pakistani students. </p>
+            </div>
+        </div>
+    </section>
+    <section class="sec-4">
+
+        <p class="heading">Get Notified About New Opportunities!</p>
+        <div class="center">
+            <p class="pg">Subscribe to our newsletter and recieve the latest news for choosing and applying in the Universities that matches you</p>
+        </div>
+        <div class="mail">
+            <input type="email" placeholder="Email here">
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+    <div class="sec-5" id="about"> 
+        <div class="center">
+            <div class="left">
+                <div class="heading">Watch Review About our recognized Universities!</div>
+                <div class="p">Listen to our students that gives valuable reviews about our organization and Universities</div>
+                <button>watch more</button>
+            </div>
+            <div class="right">
+                <video controls poster="images/assets/video.png"></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec-6" id="contact">
+        <div class="center">
+            <div class="left">
+                <div class="heading">Get in touch with us</div>
+                <p class="para">Find out more about Study in Turkey, university admissions and jobs for Pakistani students, from our experienced consultants.</p>
+                <div class="r1">
+                    <span class="fa fa-envelope-o"></span>
+                    <p>Unknown@gmail.com</p>
+                </div>
+                <div class="r1">
+                    <span class="fa fa-phone"></span>
+                    <p>+92 3044949481</p>
+                </div>
+            </div>
+            <div class="right">
+                <p class="heading">Contact Form</p>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your phone">
+                <input type="text" placeholder="Your Message" class="msg">
+                <button>submit</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="sec-7">
+        <div class="center">
+            <div class="logo"> <img src="images/assets/logo-bottom.png"></div>
+            <p>You also connect with us</p>
+            <ul>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-tumblr"></a></li>
+                <li><a href="#" class="fa fa-google"></a></li>
+                <li><a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
